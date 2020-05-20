@@ -1,0 +1,413 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: Century Gothic;
+}
+
+header{
+	background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url('obrazky/main.jpg');
+	height: 100vh;
+	background-size: cover;
+	background-position: center;
+}
+
+ul{
+	float: right;
+	list-style-type: none; 
+	margin-top: 45px;
+}
+
+ul li{
+	display: inline-block;
+}
+
+ul li a{
+	text-decoration: none;
+	color:#fff;
+	padding: 5px 20px;
+	border: 1px solid transparent;
+	transition: 0.6s ease;
+}
+
+ul li a:hover{
+	background-color: #fff;
+	color: #000;
+}
+
+.logo img{
+	float: left;
+	width: 100px;
+	height: auto;
+	margin-top: 5px;
+}
+
+.main{
+	max-width: 1200px;
+	margin: auto;
+}
+
+.title{
+	position: absolute;
+	top:50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+}
+
+.title h1{
+	color: #fff;
+	font-size: 70px;
+}
+
+.title h2{
+	color: #fff;
+	font-size: 40px;
+	text-align: center;
+}
+
+.button{
+	position: absolute;
+	top:65%;
+	left:50%;
+	transform: translate(-50%,-50%);
+}
+
+.btn{
+	border: 1px solid #fff;
+	padding: 10px 30px;
+	color: #fff;
+	text-decoration: none;
+	transition:  0.6s ease;
+}
+
+.btn:hover{
+	background-color: #fff;
+	color: #000;
+}
+
+.wrapper{
+  position: absolute;
+  width: 65vw;
+  height: 30vh;
+  margin: 0px auto;
+  top:30%;
+  left:18%;
+  box-shadow: 0 0 20px -5px #999;
+  background-color: rgba(21, 69, 86, 1);
+}
+
+#line{
+	display: flex;
+	background-color: #031625;
+	top: 20%;
+}
+
+.item{
+	transform: translate3d(0,0,0);
+	position: relative;
+	width: 40%;
+	height: 50vh;
+	min-height: 600px;
+	color: #fff;
+	overflow: hidden;
+	transition: width 0.5s ease;
+	line-height: 1.75;
+}
+
+#line:hover .item{
+	width:23.333%;
+}
+
+.item:before, .item:after{
+	transform: translate3d(0,0,0);
+	content: '';
+	position: absolute;
+	left:0;
+	top: 0;
+	width: 100%;
+	height: 100%;
+}
+
+.item after{
+	background-color: rgba(3,22,37,0.85);
+	opacity: 1;
+	transition: opacity 0.5s ease;
+}
+
+.item before{
+	background: linear-gradient(to bottom,rgba(3,22,37,0.85) 0%,rgba(3,22,37,0.85) 75%);
+	z-index: 1;
+	opacity: 0;
+	transform: translate3d(0,0,0) translateY(50%);
+	transition: opacity 0.5s ease transform 0.5s ease;
+}
+
+.item:hover{
+	width: 30% !important
+}
+
+.item:hover:after{
+	opacity: 0;
+}
+
+.item:hover:before{
+	opacity: 1;
+	transform: translate3d(0,0,0) translateY(0);
+	transition: opacity 1s ease transform 1s ease 0.25s;
+}
+
+.item_bg{
+	transform: translate3d(0,0,0);
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-size: cover;
+	background-position: center;
+	transition: filter 0.5s ease;
+	filter: grayscale(100%);
+}
+
+.item:hover .item_bg{
+	filter: grayscale(0);
+}
+
+.nazev{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%) translateY(-50%);
+	z-index: 1;
+	border-top: 1px solid #fff;
+	border-bottom: 1px solid #fff;
+}
+
+.nazev h2{
+	font-size: 1.728rem;
+	background-color: rgba(20, 24, 25, 0.52);
+}
+
+.content {
+	transform: translate3d(0,0,0) translateY(25px);
+	background-color: rgba(20, 24, 25, 0.52);
+	position: relative;
+	z-index: 1;
+	text-align: center;
+	margin: 0 1.618em;
+	top: 70%;
+	opacity: 0;
+}
+
+.item:hover .content{
+	opacity: 1;
+	transform: translateY(0);
+	transition: all 0.75s ease 0.5s;
+}
+
+#steak{
+	background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)), url('obrazky/main.jpg');
+}
+
+.nadpis h1{
+	position: absolute;
+	color: #fff;
+	font-size: 70px;
+	top: 20%;
+	left: 20%;
+}
+
+
+.contact-form{
+	width: 85%;
+	max-width: 600px;
+	background: rgba(20, 24, 25, 0.52);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	padding: 30px 40px;
+	border: 1px solid #fff;
+	box-sizing: border-box;
+	border-radius: 8px;
+	box-shadow: 0 0 20px #000000b3;
+	font-family: "Montserrat",sans-serif;
+	transition:  0.6s ease;
+}
+
+.contact-form h1{
+	margin-top: 0;
+	font-weight: 200;
+	color: #fff;
+}
+
+.txtb{
+	border:1px solid gray;
+	margin: 8px 0;
+	padding: 12px 18px;
+	border-radius: 8px;
+}
+
+.txtb label{
+	display: block;
+	text-align: left;
+	color: #fff;
+	text-transform: uppercase;
+	font-size: 14px;
+}
+
+.txtb input, .txtb textarea{
+	width: 100%;
+	border: none;
+	background: none;
+	outline: none;
+	font-size: 18px;
+	margin-top: 6px;
+	max-height: 700px;
+	color: #fff;
+}
+
+.button-formular{
+	display: inline-block;
+	padding: 14px 0;
+	margin-top: 8px;
+	width: 100%;
+}
+
+.btn-formular{
+	border: 1px solid #fff;
+	padding: 10px 30px;
+	color: #fff;
+	text-decoration: none;
+	transition:  0.6s ease;
+}
+
+.btn-formular:hover{
+	background-color: #fff;
+	color: #000;
+}
+
+
+@media screen and (max-width: 900px) {
+  ul {
+    width: 100%;
+    position: relative;
+    margin-top: 40px;
+  }
+  
+  ul li a {
+    float: left;
+    clear: left;
+    padding: 10px;
+  }
+
+  ul li{
+    display: flex;
+    align-items: center;
+  	justify-content: center;
+  }
+
+  	#line{
+	display: flex;
+	flex-direction: column;
+	background-color: #031625;
+	top: 20%;
+	}
+
+	.item{
+	width: 100%;
+	height: 30vh;
+	min-height: 0;
+	}
+
+	#line:hover .item{
+	width: 100%;
+	}
+
+	.item:hover{
+	width: 100% !important
+	}
+
+	.wrapper{
+	  top: 50%;
+	  width: 100%;	
+	  height: 5vh;
+	  left:0%;
+	}
+
+	.content{
+		top: 50%;
+		line-height:normal;
+		font-size: 0.8rem;
+	}
+
+	.nazev{
+		top: 30%;
+	}
+
+	.nadpis h1{
+	font-size: 50px;
+	top: 40%;
+	left: 10%;
+	}
+
+	.button{
+	display: flex;
+    align-items: center;
+  	justify-content: center;
+  	margin: 0 5px;
+	}
+
+	.btn{
+		padding: 5px 10px;
+	}
+
+	.title{
+	top:60%;
+	}
+
+	.title h1{
+	font-size: 40px;
+	width: 70vw;
+	text-align: center;
+	}
+
+	.title h2{
+	font-size: 30px;
+	}
+
+	.nazev h2{
+	font-size: 1rem;
+	font-weight: normal;
+	letter-spacing: 1px;
+	font-size: 1.2rem;
+	}
+
+	#jist{
+	position: relative;
+	width: 30vw;
+	top:15vh;
+	}
+
+	#pit{
+	position: absolute;
+	width: 30vw;
+	top:25vh;
+	}
+
+	.contact-form{
+	margin-top: 15vh;
+	}
+
+	.logo img{
+	position: absolute;
+	margin-top: 5px;
+	}
+
+}
+
+@media screen and (max-width: 400px) {
+  ul li a {
+    text-align: center;
+    float: none;
+  }
+}
